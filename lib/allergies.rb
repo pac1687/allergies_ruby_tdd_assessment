@@ -4,13 +4,12 @@ def allergies(user_score)
 	user_allergen_array = []
 
 	allergen_score.each do |allergen, score|
-		if score == user_score
+		if user_score >= score
 			user_allergen_array << allergen
+			user_score -= score
 		end
 	end
 
-	print user_allergen_array
+user_allergen_array
 
 end
-
-print allergies(16)
